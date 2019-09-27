@@ -12,7 +12,7 @@ class Navbar extends Component {
                 fontFamily: "monospace"
               }}
               className="col s5 brand-logo left white-text">
-            Logo</Link></div>
+            Home | GetMyBus</Link></div>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="">Book Now</a></li>
       
