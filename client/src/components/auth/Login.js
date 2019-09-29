@@ -34,6 +34,7 @@ class Login extends Component {
             <React.Fragment>
                 <div className="container">
                     <div className="row">
+                       
                         <div className="col-md-8 m-auto">
                             <h2 className="mt-5 text-center mb-0">Login Here</h2>
                             <form onSubmit={this.handleSubmit}>
@@ -45,12 +46,13 @@ class Login extends Component {
                                 <div className="form-group">
                                     <input type="password" name="password" value={password} onChange={this.handleChange} className={error.type ==="password" ? "is-invalid form-control" : "form-control"} placeholder="Password"/><span className="invalid-feedback">{error.msg}</span>
                                     </div>  
-                                    <input type="submit" className="btn btn-primary justify-content-center d-flex w-100" value="Login"/>
+                                    <input type="submit" className="btn btn-dark justify-content-center d-flex w-100" value="Login"/>
                                 
                             </form>
                         </div>
+                        </div>
                     </div>
-                </div>
+                
     
             </React.Fragment>
         );

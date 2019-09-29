@@ -48,7 +48,7 @@ class Register extends Component {
                                 <div className="form-group">
                                     <input type="password" name="password" value={password} onChange={this.handleChange} className={error.type ==="password" ? "is-invalid form-control" : "form-control"} placeholder="Password"/><span className="invalid-feedback">{error.msg}</span>
                                     </div>  
-                                    <input type="submit" className="btn btn-primary justify-content-center d-flex w-100" value="Register"/>
+                                    <input type="submit" className="btn btn-dark justify-content-center d-flex w-100" value="Register"/>
                                 
                             </form>
                         </div>
