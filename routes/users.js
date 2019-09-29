@@ -2,8 +2,10 @@ const express = require ('express');
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const router = express.Router();
-
-const { Users , regValidate} = require('../models/Users');
+const jwt = require('jsonwebtoken');
+const jwt_decode = require ('jwt-decode');
+const keys = require('../config/keys');
+const { Users , regValidate, logValidate} = require('../models/Users');
 //GET
 router.get("/", (req,res) => {
     res.send("hiiii");
@@ -61,6 +63,71 @@ router.post("/register", (req,res) => {
         })
     })
 });
+
+//post login
+
+router.post('/login',    (req,res)=>{
+    //validation
+    const { error } = logValidate(req.body);
+    if(error) {
+        return res.status(400).json({
+        status : 'error',
+        type : error.details[0].path[0],
+        msg : error.details[0].message
+          });
+}
+
+//check email exists
+
+Users.findOne({email : req.body.email}).then(user => {
+    if(!user){
+        return res.status(400).json({
+            status : "error",
+            type : "email",
+            msg : "Email is not registerd"
+        });
+    }
+
+//check paswrd
+
+ bcrypt.compare(req.body.password,user.password).then(isMatch =>{
+     if(isMatch){
+         //genertae token
+         const payload = {
+             id : user.id,
+             username : user.username,
+             email : user.email
+         };
+
+    jwt.sign(payload,keys.secretKey,{expiresIn : 3600},(err,token) => {
+        const decode = jwt_decode(token);
+         res.json({
+            success : true,
+            token : 'Bearer ' + token,
+            decode : decode
+
+        });
+    });
+     }else{
+        return res.status(400).json({
+            status : "error",
+            type : "password",
+            msg : "Password is incorrect"
+        });
+
+     }
+
+ })
+
+
+})
+
+
+
+
+
+});
+
 
 
 
