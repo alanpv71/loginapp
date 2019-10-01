@@ -104,9 +104,11 @@ Users.findOne({email : req.body.email}).then(user => {
          res.json({
             success : true,
             token : 'Bearer ' + token,
-            decode : decode
+            decode : decode,
+           
 
         });
+       
     });
      }else{
         return res.status(400).json({
