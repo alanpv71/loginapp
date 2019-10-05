@@ -1,14 +1,15 @@
 import React from 'react';
-import { Link , NavLink} from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
 
 const Header = () => {
 return (
-    <header>
+    <div className="App">
+
+
+
         <nav className="navbar navbar-dark bg-dark">
             <div className="container">
-                <Link to="/" className="navbar-brand">
-                GetMyBus
-                </Link>
+               
                 <ul className="navbar-nav">
                     <li className="nav-item">
                         <NavLink to="/register" className="nav-link">Register</NavLink>
@@ -18,9 +19,11 @@ return (
                     </li>
                 </ul>
             </div>
-        </nav>
-    </header>
+        </nav>  
+    </div>
 )
+    
+
 }
 
 export default Header;

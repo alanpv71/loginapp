@@ -8,7 +8,7 @@ const keys = require('../config/keys');
 const { Users , regValidate, logValidate} = require('../models/Users');
 //GET
 router.get("/", (req,res) => {
-    res.send("hiiii");
+    console.log("hiiii");
 })
 
 

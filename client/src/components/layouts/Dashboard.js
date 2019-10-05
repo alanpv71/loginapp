@@ -22,7 +22,7 @@ render(){
 
     return (
         
-        <React.Fragment>
+       
             
             <div className="container">
                 <div className="row">
@@ -34,7 +34,7 @@ render(){
                                       
                     </div>
                     <div class="book-form" id="register">
-			<p>Pick your destination</p>
+			<p>Plan Your Trip</p>
 			   <form action="#" method="post">
 					<div class="col-md-3 form-time-w3layouts">
 							<label> Starting Point </label>
@@ -68,22 +68,11 @@ render(){
 						  <input type="submit" value="Search">
                               </input></div>
                               </form>
-
-			
-			
-			
-
-
-
-
-
-
-
-</div>
-                </div>
+				</div>
+            </div>
             
 
-        </React.Fragment>
+      
     );
 }
 }

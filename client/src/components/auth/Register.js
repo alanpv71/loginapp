@@ -1,6 +1,6 @@
 import React, {Component}  from "react";
 import axios from 'axios';
-
+import Header from '../layouts/Header';
 class Register extends Component {
     state = {
         username  :"",
@@ -32,6 +32,7 @@ class Register extends Component {
         return (
             
             <React.Fragment>
+                <Header/>  
                 <div className="container">
                     <div className="row">
                         <div className="col-md-8 m-auto">

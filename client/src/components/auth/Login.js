@@ -1,5 +1,7 @@
 import React, {Component}  from "react";
 import axios from 'axios';
+import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
+import Header from '../layouts/Header';
 
 class Login extends Component {
     state = {
@@ -30,9 +32,10 @@ class Login extends Component {
     render(){
         const {email,password,error} = this.state;
         return (
-            
+             
             <React.Fragment>
-                <div className="container">
+                <Header/>  
+                  <div className="container">
                     <div className="row">
                        
                         <div className="col-md-8 m-auto">
