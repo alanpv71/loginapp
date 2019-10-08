@@ -13,7 +13,7 @@ class Dashboard extends Component{
      
       handleChange = date => {
         this.setState({
-          startDate: date
+          startDate: "Journey Date"
         });
       };
  
@@ -29,7 +29,7 @@ render(){
                    
                     <div className="col-md-8 m-auto">
                         <h2 className="mt-5 text-center mb-0">Welcome</h2>
-						<h1>The N0.1 Bus Booking Platform in SOuth India</h1>
+						<h1>The N0.1 Bus Booking Platform in SOuth India </h1>
                     </div>
                     
                                       
