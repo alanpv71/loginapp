@@ -1,6 +1,7 @@
 import React, {Component}  from "react";
 import axios from 'axios';
-import Header from '../layouts/Header';
+import {BrowserRouter as Router, Route, Switch, NavLink} from 'react-router-dom';
+
 class Register extends Component {
     state = {
         username  :"",
@@ -32,11 +33,12 @@ class Register extends Component {
         return (
             
             <React.Fragment>
-                <Header/>  
+                
                 <div className="container">
                     <div className="row">
                         <div className="col-md-8 m-auto">
                             <h2 className="mt-5 text-center mb-0">Register Here</h2>
+                            <NavLink to="/login" className="nav-link">Login</NavLink>
                             <form onSubmit={this.handleSubmit}>
                                 <div className="form-group">
                                     <input type="text" name="username" value ={username} onChange={this.handleChange} className={error.type ==="username" ? "is-invalid form-control" : "form-control"} placeholder="Username"/><span className="invalid-feedback">{error.msg}</span>

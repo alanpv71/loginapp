@@ -1,7 +1,6 @@
 import React, {Component}  from "react";
 import DatePicker from "react-datepicker";
-import { Button, Form, Col, Row, Table } from 'react-bootstrap'; 
-import Select from 'react-select';
+
 import "react-datepicker/dist/react-datepicker.css";
 
 
@@ -17,6 +16,23 @@ class Dashboard extends Component{
           startDate: "Journey Date"
         });
       };
+
+
+      
+
+      
+      
+
+      submit = () => {
+        
+        var start = document.getElementById("start").selectedIndex;
+         var end = document.getElementById("end").selectedIndex;
+         if (start == end) {
+             window.alert("Ending Place Cannot be same as Starting Place");
+             
+         }}
+      
+    
  
 render(){
   
@@ -30,7 +46,7 @@ render(){
                    
                     <div className="col-md-8 m-auto">
                         <h2 className="mt-5 text-center mb-0">Welcome</h2>
-						<h1>The N0.1 Bus Booking Platform in SOuth India </h1>
+						<h1> </h1>
                     </div>
                     
                                       
@@ -40,7 +56,7 @@ render(){
 			   <form action="#" method="post">
 					<div class="col-md-3 form-time-w3layouts">
 							<label> Starting Point </label>
-							<select class="form-control">
+							<select class="startplace" id="start">
 								<option>From</option>
 								<option>Bangalore</option>
 								<option>Mysore</option>
@@ -51,7 +67,7 @@ render(){
 					</div>
 					<div class="col-md-3 form-left-agileits-w3layouts ">
 							<label> Destination</label>
-							<select class="form-control">
+							<select class="endplace"  id="end">
                             <option>To</option>
 								<option>Bangalore</option>
 								<option>Mysore</option>
@@ -67,11 +83,11 @@ render(){
         onChange={this.handleChange}
       /></div>
 					<div class="col-md-3 form-left-agileits-submit">
-						  <input type="submit" value="Search">
-                              </input></div>
+						  <button type="button" onClick={this.submit} value="Search">Search
+                              </button></div>
                               </form>
 				</div>
-
+   
             </div>
 			
             

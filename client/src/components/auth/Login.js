@@ -1,7 +1,7 @@
 import React, {Component}  from "react";
 import axios from 'axios';
-import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
-import Header from '../layouts/Header';
+import {BrowserRouter as Router, Route, Switch, NavLink} from 'react-router-dom';
+
 
 class Login extends Component {
     state = {
@@ -34,12 +34,13 @@ class Login extends Component {
         return (
              
             <React.Fragment>
-                <Header/>  
+                
                   <div className="container">
                     <div className="row">
                        
                         <div className="col-md-8 m-auto">
                             <h2 className="mt-5 text-center mb-0">Login Here</h2>
+                            <NavLink to="/register" className="nav-link">Register</NavLink>
                             <form onSubmit={this.handleSubmit}>
                                 
                                 <div className="form-group">
