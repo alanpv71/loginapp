@@ -7,6 +7,21 @@ import "react-datepicker/dist/react-datepicker.css";
 
 
 class Dashboard extends Component{
+
+  
+
+  submit = () => {
+        
+    var start = document.getElementById("start").selectedIndex;
+     var end = document.getElementById("end").selectedIndex;
+     if (start == end) {
+         window.alert("Ending Place Cannot be same as Starting Place");
+         
+     }}
+  
+
+
+
     state = {
         startDate: new Date()
       };
@@ -16,23 +31,7 @@ class Dashboard extends Component{
           startDate: "Journey Date"
         });
       };
-
-
-      
-
-      
-      
-
-      submit = () => {
-        
-        var start = document.getElementById("start").selectedIndex;
-         var end = document.getElementById("end").selectedIndex;
-         if (start == end) {
-             window.alert("Ending Place Cannot be same as Starting Place");
-             
-         }}
-      
-    
+          
  
 render(){
   
@@ -87,10 +86,9 @@ render(){
                               </button></div>
                               </form>
 				</div>
-   
-            </div>
+        </div>
 			
-            
+        
 
       
     );
