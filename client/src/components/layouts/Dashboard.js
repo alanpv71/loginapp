@@ -1,6 +1,7 @@
 import React, {Component}  from "react";
 import DatePicker from "react-datepicker";
- 
+import { Button, Form, Col, Row, Table } from 'react-bootstrap'; 
+import Select from 'react-select';
 import "react-datepicker/dist/react-datepicker.css";
 
 
@@ -70,7 +71,9 @@ render(){
                               </input></div>
                               </form>
 				</div>
+
             </div>
+			
             
 
       

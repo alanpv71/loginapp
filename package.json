@@ -21,7 +21,9 @@
     "jsonwebtoken": "^8.5.1",
     "jwt-decode": "^2.2.0",
     "mongoose": "^5.7.1",
-    "react-datepicker": "^2.9.6"
+    "react-bootstrap": "^1.0.0-beta.14",
+    "react-datepicker": "^2.9.6",
+    "react-select": "^3.0.8"
   },
   "devDependencies": {
     "nodemon": "^1.19.2"
