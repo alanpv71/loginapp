@@ -6,7 +6,7 @@ import Register from "./components/auth/Register";
 import Login from './components/auth/Login';
 import Dashboard from './components/layouts/Dashboard';
 import Home from './components/layouts/Home';
-
+import SelectBus from './components/layouts/Selectbus';
 class App extends Component {
   render() {
     return (
@@ -18,6 +18,7 @@ class App extends Component {
       <Route  path="/dashboard" component = {Dashboard}></Route>
       <Route  path ="/register" component= { Register }></Route>
       <Route  path ="/login" component= { Login }></Route>
+      <Route path = "/selectbus" component ={SelectBus}></Route>
     </Switch>
     
     </Router>

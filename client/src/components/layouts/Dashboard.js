@@ -15,8 +15,11 @@ class Dashboard extends Component{
     var start = document.getElementById("start").selectedIndex;
      var end = document.getElementById("end").selectedIndex;
      if (start == end) {
-         window.alert("Ending Place Cannot be same as Starting Place");
-         
+      
+      window.alert("Ending Place Cannot be same as Starting Place");
+     }else{
+      this.props.history.push('/selectbus');
+      
      }}
   
 

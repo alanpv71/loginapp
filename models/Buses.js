@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Joi = require("joi");
 const busSchema = new mongoose.Schema({
-    busid :{
+    busname :{
         type :String,
         required : true
     },
@@ -13,11 +13,7 @@ const busSchema = new mongoose.Schema({
         type : String,
         required : true
     },
-    type: {
-        type: String,
-        required : true
-      },
-    route: {
+   route: {
         type: String,
         required : true
         },
