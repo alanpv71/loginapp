@@ -47,14 +47,14 @@ render(){
                 <div className="row">
                    
                     <div className="col-md-8 m-auto">
-                        <h2 className="mt-5 text-center mb-0">Welcome</h2>
+                        <h2 className="mt-5 text-center mb-0"></h2>
 						<h1> </h1>
                     </div>
                     
                                       
                     </div>
                     <div class="book-form" id="register">
-			<p>Plan Your Trip</p>
+			
 			   <form action="#" method="post">
 					<div class="col-md-3 form-time-w3layouts">
 							<label> Starting Point </label>
