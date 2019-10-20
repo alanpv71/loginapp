@@ -1,48 +1,21 @@
-import React from 'react';
-const MongoClient = require('mongodb').MongoClient;
-const assert = require('assert');
+import React, {Component}  from "react";
 
-// Connection URL
-const url = 'mongodb+srv://admin:admin@getmybus-a9dlh.mongodb.net/test?retryWrites=true&w=majority';
+class Selectbus extends Component{
 
-// Use connect method to connect to the Server
-MongoClient.connect(url, function (err, client) {
-    console.log(err);
-    assert.equal(null, err);
-   const db = client.db("test");
-var cursor = db.collection('buses').find({});
-cursor.forEach(iterateFunc, errorFunc);
-function iterateFunc(doc) {
-    console.log(JSON.stringify(doc, null, 4));
- }
+  
+
+          
  
- function errorFunc(error) {
-    console.log(error);
- }
- 
- 
- client.close();
-});
+render(){
+  
 
-
-const Selectbus = () => {
-return (
-    <div>Hiiiii</div>
-)
-    
-
+    return (
+        
+       <div>sdbjskhviss</div>
+           
+    );
+}
 }
 
+
 export default Selectbus;
-
-
-
-
-
-
-
-
-
-
-
-

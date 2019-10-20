@@ -1,6 +1,6 @@
 import React, {Component}  from "react";
 import axios from 'axios';
-import {BrowserRouter as Router, Route, Switch, NavLink} from 'react-router-dom';
+import {BrowserRouter as NavLink} from 'react-router-dom';
 
 
 class Login extends Component {
